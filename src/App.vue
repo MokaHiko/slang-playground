@@ -437,6 +437,10 @@ async function runIfFullyInitialized() {
         } else {
             compileOrRun();
         }
+
+        // Expose to window object
+        window.compiler = compiler;
+        window.compileShader = compileShader;
     }
 }
 
